@@ -1,0 +1,25 @@
+﻿<Window x:Class="EMP.AddEventWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddEventWindow" Height="446" Width="805">
+    <Grid>
+        <Label Content="Add New Event" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" />
+        <Label Content="Name" Height="28" HorizontalAlignment="Left" Margin="10,48,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Date" Height="28" HorizontalAlignment="Left" Margin="10,0,0,293" Name="label3" VerticalAlignment="Bottom" />
+        <Label Content="Time" Height="28" HorizontalAlignment="Left" Margin="10,124,0,0" Name="label4" VerticalAlignment="Top" />
+        <Label Content="Venue" Height="28" HorizontalAlignment="Left" Margin="10,162,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Content="Description" Height="28" HorizontalAlignment="Left" Margin="10,200,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="124,50,0,0" Name="eventNameBox" VerticalAlignment="Top" Width="295" />
+        <TextBox Height="123" HorizontalAlignment="Left" Margin="124,202,0,0" Name="descriptionBox" VerticalAlignment="Top" Width="295" TextWrapping="WrapWithOverflow" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="124,87,0,0" Name="datePicker" VerticalAlignment="Top" Width="115" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="124,126,0,0" Name="timeBox" VerticalAlignment="Top" Width="120" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="124,164,0,0" Name="venueBox" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem  Name="CentralForum">Central Forum</ComboBoxItem>
+            <ComboBoxItem  Name="Library">Library</ComboBoxItem>
+            <ComboBoxItem  Name="Lt15">Lt15</ComboBoxItem>
+            <ComboBoxItem  Name="Lt16">Lt16</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="124,342,0,0" Name="Save" VerticalAlignment="Top" Width="78" Click="Save_Click" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="224,342,0,0" Name="Cancel" VerticalAlignment="Top" Width="75" Click="Cancel_Click" />
+    </Grid>
+</Window>
