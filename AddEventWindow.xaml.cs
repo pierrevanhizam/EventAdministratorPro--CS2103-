@@ -31,7 +31,16 @@ namespace EMP
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            student.createEvent(1, eventNameBox.Text, descriptionBox.Text, datePicker.Text);
+            bool makePublic;
+            if (radioButton1.IsChecked.Value)
+            {
+                makePublic = true;
+            }
+            else
+            {
+                makePublic = false;
+            }
+            student.createEvent(1, eventNameBox.Text, descriptionBox.Text, datePicker.Text, makePublic);
             EventListWindow window = new EventListWindow();
             window.student = student;
             window.Show();

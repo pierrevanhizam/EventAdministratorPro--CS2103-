@@ -24,9 +24,9 @@ namespace StudentClass
             password = Password;
         }
 
-        public void createEvent(int Id, string Name, string Description, string StartDate)
+        public void createEvent(int Id, string Name, string Description, string StartDate, bool MakePublic)
         {
-            Event ev = new Event(Id, Name, Description, StartDate, this.userId);
+            Event ev = new Event(Id, Name, Description, StartDate, this.userId, MakePublic);
             ev.saveToFile();
         }
 

@@ -42,6 +42,7 @@ namespace EMP
             try
             {
                 StreamReader sr = new StreamReader("events.txt");
+                bool makePublic = true;
                 while (!sr.EndOfStream)
                 {
                     int id = Convert.ToInt16(sr.ReadLine());
@@ -50,7 +51,7 @@ namespace EMP
                     string startDate = sr.ReadLine();
                     string organizerName = sr.ReadLine();
 
-                    Event i = new Event(id, name, description, startDate, organizerName);
+                    Event i = new Event(id, name, description, startDate, organizerName, makePublic);
                     this.EventList.Add(i);
                 }
             }
