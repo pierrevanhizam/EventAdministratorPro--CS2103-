@@ -1,53 +1,10 @@
-﻿<Window x:Class="EMP.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="MainWindow" Height="446" Width="805">
-    <Window.Resources>
-        <DataTemplate x:Key="listBoxTemplate">
-            <StackPanel Margin="3">
-                <DockPanel >
-                    <TextBlock FontWeight="Bold" Text="Event:"
-                  DockPanel.Dock="Left"
-                  Margin="5,0,10,0"/>
-                    <TextBlock Text="  " />
-                    <TextBlock Text="{Binding name}" Foreground="Green" FontWeight="Bold" />
-                </DockPanel>
-                <DockPanel >
-                    <TextBlock FontWeight="Bold" Text="Date:"
-                  DockPanel.Dock="Left"
-                  Margin="5,0,10,0"/>
-                    <TextBlock Text="  " />
-                    <TextBlock Text="{Binding startDate}" FontWeight="Bold" />
-                </DockPanel>
-                <DockPanel >
-                    <TextBlock FontWeight="Bold" Text="Description:"
-                  DockPanel.Dock="Left"
-                  Margin="5,0,5,0"/>
-                    <TextBlock Text="{Binding description}" />
-                </DockPanel>
-            </StackPanel>
-        </DataTemplate>
-    </Window.Resources>
-    <Grid>
-        <Button Content="Log in" Height="23" HorizontalAlignment="Left" Margin="12,193,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="12,153,0,0" Name="passwordBox" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,101,0,0" Name="userIdBox" VerticalAlignment="Top" Width="120" />
-        <Label Content="User ID" Height="28" HorizontalAlignment="Left" Margin="8,77,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="Password" Height="28" HorizontalAlignment="Left" Margin="8,130,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="Wrong id or password" Height="56" HorizontalAlignment="Left" Margin="12,222,0,0" Name="errorLabel" VerticalAlignment="Top" Visibility="Hidden" Foreground="Red" Width="174" />
-        <Grid Height="340" HorizontalAlignment="Left" Margin="184,67,0,0" Name="grid1" VerticalAlignment="Top" Width="599">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="599*" />
-                <ColumnDefinition Width="0*" />
-            </Grid.ColumnDefinitions>
-            <ListBox Margin="17,-21,15,26" Name="listBox1"  ItemsSource="{Binding EventList}"
-                 ItemTemplate="{StaticResource listBoxTemplate}" />
-            
-           
-        </Grid>
-        <Label Content="Upcoming Events" Height="28" HorizontalAlignment="Left" Margin="201,12,0,0" Name="label3" VerticalAlignment="Top" FontWeight="Bold" />
-    </Grid>
-    
-    
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="EMP.MainWindow"
+	x:Name="Window"
+	Title="EventsAdministratorPro" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Width="1024" Height="768">
+	<DockPanel>
+		<Frame x:Name="_mainFrame" />
+	</DockPanel>
 </Window>

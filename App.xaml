@@ -3,6 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
-    </Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Elysium.Theme;component/Themes/Generic.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			<Style TargetType="{x:Type Window}" />
+			<Style TargetType="{x:Type TextBox}">
+				<Setter Property="FontSize" Value="16"/>
+				<Setter Property="Padding" Value="5"/>
+			</Style>
+			<Style TargetType="{x:Type PasswordBox}">
+				<Setter Property="FontSize" Value="16"/>
+				<Setter Property="Padding" Value="5"/>
+			</Style>
+		</ResourceDictionary>
+		<!-- Resources scoped at the Application level should be defined here. -->
+	</Application.Resources>
 </Application>
