@@ -1,0 +1,63 @@
+﻿<Page
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:metro="http://schemas.codeplex.com/elysium/theme" mc:Ignorable="d"
+	x:Class="EMP.EventsScreen"
+	x:Name="Page"
+	Width="1024" Height="768" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+	<StackPanel>
+		<StackPanel.Background>
+			<ImageBrush/>
+		</StackPanel.Background>
+		<StackPanel Orientation="Horizontal" Margin="0,15,30,0" d:LayoutOverrides="Width" HorizontalAlignment="Right">
+			<Label Content="Logged in as" Margin="0" FontSize="13.333" Foreground="#CC000000"/>
+			<Label x:Name="loggedInUserLabel" FontWeight="Bold" Content="Melvin" Padding="0,5" FontSize="13.333"/>
+			<Button Content="LOGOUT" Padding="8,0" Margin="10,0,0,0" FontSize="12" Background="#FF333333"/>
+		</StackPanel>
+		<Grid Margin="30,20,30,0" d:LayoutOverrides="Width">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0*"/>
+			</Grid.RowDefinitions>
+			<TextBlock TextWrapping="Wrap" Text="Events Management" FontSize="32" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalAlignment, Height, GridBox" Grid.Row="1"/>
+			<Button Content="Create New Event" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="16" FontWeight="Normal" Padding="10" Grid.Row="1"/>
+		</Grid>
+		<TabControl DockPanel.Dock="Right" Margin="30,15,30,0">
+			<TabItem Header="Upcoming" IsSelected="True">
+				<StackPanel Height="560">
+					<DataGrid x:Name="upcomingEventsListGrid" Margin="0,20" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" GridLinesVisibility="None">
+						<DataGrid.BorderBrush>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Black" Offset="0"/>
+								<GradientStop Color="White" Offset="1"/>
+							</LinearGradientBrush>
+						</DataGrid.BorderBrush>
+						<DataGrid.Columns>
+							<DataGridTextColumn Header="EVENT NAME" Width="*" Binding="{Binding name}" />
+							<DataGridTextColumn Header="DATE" Width="100" Binding="{Binding startDate}" />
+							<DataGridTextColumn Header="TIME" Width="120" Binding="{Binding startTime}" />
+							<DataGridTextColumn Header="VENUE" Width="150" Binding="{Binding venue}" />
+							<!--<DataGridTemplateColumn Header="ACTION(S)" CellTemplate="{DynamicResource ActionCellTemplate}" />-->
+						</DataGrid.Columns>
+					</DataGrid>
+				</StackPanel>
+			</TabItem>
+			<TabItem Header="My Events">
+				<StackPanel Margin="0" d:LayoutOverrides="Width" Height="565">
+					<Label Content="CREATED EVENTS" HorizontalAlignment="Left" Margin="0,20,0,0" FontSize="16" FontWeight="Bold"/>
+					<DataGrid x:Name="createdEventsListGrid" Margin="5,10" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True">
+						<DataGrid.Columns>
+							<DataGridTextColumn Header="EVENT NAME" Width="*" Binding="{Binding name}" />
+							<DataGridTextColumn Header="DATE" Width="100" Binding="{Binding startDate}" />
+							<DataGridTextColumn Header="TIME" Width="120" Binding="{Binding startTime}" />
+							<DataGridTextColumn Header="VENUE" Width="150" Binding="{Binding venue}" />
+							<!--<DataGridTemplateColumn Header="ACTION(S)" CellTemplate="{DynamicResource ActionCellTemplate}" />-->
+						</DataGrid.Columns>
+					</DataGrid>
+					<Separator Height="30" Margin="0"/>
+					<Label Content="REGISTERED EVENTS" HorizontalAlignment="Left" Margin="0" FontSize="16" FontWeight="Bold"/>
+					<Label Content="Oops! You don't seem to have any events registered under your account." HorizontalAlignment="Left" Margin="0" FontSize="14.667"/>
+				</StackPanel>
+			</TabItem>
+		</TabControl>
+	</StackPanel>
+</Page>

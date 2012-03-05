@@ -25,7 +25,7 @@ namespace EMP
 		public MainWindow()
 		{
 			this.InitializeComponent();
-			this._mainFrame.Navigate(new Uri("LoginScreen.xaml", UriKind.Relative));
+			this._mainFrame.Navigate(new Uri("EventsScreen.xaml", UriKind.Relative));
 		}
     }
 }

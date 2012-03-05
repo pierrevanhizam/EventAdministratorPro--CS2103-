@@ -4,8 +4,7 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:metro="http://schemas.codeplex.com/elysium/theme" mc:Ignorable="d"
 	x:Class="EMP.LoginScreen"
 	x:Name="Page"
-	WindowTitle="Page"
-	Width="1024" Height="768" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" >
+	Width="1024" Height="768">
 	<Page.Resources>
 		<DataTemplate x:Key="UpcomingEventsItemsTemplate">
 			<StackPanel Height="Auto" Width="650">

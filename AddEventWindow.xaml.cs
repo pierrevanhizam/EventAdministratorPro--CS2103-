@@ -27,25 +27,17 @@ namespace EMP
             InitializeComponent();
         }
 
-        public Student student { get; set; }
+       	public Student student { get; set; }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            student.createEvent(1, eventNameBox.Text, descriptionBox.Text, datePicker.Text);
-            EventListWindow window = new EventListWindow();
-            window.student = student;
-            window.Show();
-            this.Close();
+
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            EventListWindow window = new EventListWindow();
-            window.student = student;
-            window.Show();
-            this.Close();
-        }
 
+        }
 
 
 

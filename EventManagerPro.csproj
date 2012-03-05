@@ -73,7 +73,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EventListWindow.xaml">
+    <Page Include="EventsScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,8 +90,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Event.cs" />
-    <Compile Include="EventListWindow.xaml.cs">
-      <DependentUpon>EventListWindow.xaml</DependentUpon>
+    <Compile Include="EventsScreen.xaml.cs">
+      <DependentUpon>EventsScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
