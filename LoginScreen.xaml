@@ -25,43 +25,40 @@
 		</DataTemplate>
 	</Page.Resources>
 	
-	<StackPanel>
-		<DockPanel Height="768">
-			<StackPanel Width="320" HorizontalAlignment="Left" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
-				<TextBlock TextWrapping="Wrap" Text="Welcome!" Margin="30,70,30,10" FontSize="26.667"/>
-				<TextBlock Margin="30,0,30,0" TextWrapping="Wrap" FontSize="14.667" Foreground="#CC000000" TextAlignment="Justify" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae velit arcu. Sed eget dolor id lacus ornare placerat. Maecenas pulvinar nibh urna, id congue augue."/>
-				<TextBlock Margin="30,30,30,0" TextWrapping="Wrap" FontSize="14.667" TextAlignment="Justify" Foreground="#CC000000" Text="•  View all available events&#xa;•  View all upcoming events&#xa;•  Register all events"/>
-				<TextBlock TextWrapping="Wrap" Text="Login" Margin="30,50,30,10" FontSize="26.667"/>
-				<Label Content="Username" FontSize="13.333" Margin="30,0" Padding="0,0,0,5" Foreground="#7F000000"/>
-				<TextBox x:Name="usernameText" Margin="30,0,30,0" TextWrapping="Wrap" Height="35" />
-				<Label Content="Password" FontSize="13.333" Margin="30,10,30,0" Padding="0,0,0,5" Foreground="#7F000000"/>
-				<PasswordBox Margin="30,0" Height="35"/>
-				<Button x:Name="loginButton" Content="LOGIN" Margin="30,20,30,0" HorizontalAlignment="Right" FontSize="13.333" Width="100" Padding="5,7" Click="LoginButton_Click" />	
-			</StackPanel>
-			<StackPanel Width="704" HorizontalAlignment="Left" DockPanel.Dock="Right">
-				<DockPanel Margin="30,60,30,0">
-					<TextBlock TextWrapping="Wrap" Text="Upcoming Events" FontSize="32" Width="260"/>
-					<ComboBox x:Name="upcomingEventsFilter" HorizontalAlignment="Right" FontSize="14.667" ToolTip="View by Month" Width="175" SelectionChanged="UpcomingEventsFilter_SelectionChanged" Margin="0,10">
-						<ComboBoxItem Content="View by Month" IsEnabled="False" IsSelected="True" d:IsHidden="True" />
-						<ComboBoxItem Content="March 2012" d:IsHidden="True" />
-						<ComboBoxItem Content="February 2012" d:IsHidden="True" />
-						<ComboBoxItem Content="January 2012" d:IsHidden="True" />
-					</ComboBox>
-				</DockPanel>
-				<ScrollViewer x:Name="upcomingEventsScrollViewer" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="30,30,30,0" Height="470" BorderBrush="#FFCCCCCC" >
-					<ItemsControl x:Name="upcomingEventsListBox" ItemTemplate="{DynamicResource UpcomingEventsItemsTemplate}" />
-				</ScrollViewer>
-				<metro:CircularProgressBar x:Name="upcomingEventsLoadingIcon" Width="30" Height="30" Margin="297,-500,333,0" State="Indeterminate" Visibility="Hidden" />
-				<Separator Margin="30,0" Background="#99000000"/>
-				<DockPanel LastChildFill="False" Margin="100,20,100,10">
-					<Button x:Name="prevButton" Content="PREVIOUS" Width="150" Padding="8,9" FontSize="13.333" Click="PrevButton_Click" />
-					<Button x:Name="nextButton" Content="NEXT" Width="150" Padding="8,9" DockPanel.Dock="Right" FontSize="13.333" Click="NextButton_Click" />
-				</DockPanel>
-			</StackPanel>
-		</DockPanel>
-		<StackPanel x:Name="loginLoadingPanel" Width="1024" Height="768" Margin="0,-768,0,0" Background="#CC000000" Visibility="Hidden" Opacity="0">
-			<Label Content="Logging In..." HorizontalAlignment="Center" Foreground="#E5FFFFFF" FontSize="29.333" Padding="0" Margin="0,300,0,20"/>
-			<metro:CircularProgressBar x:Name="loginLoadingIcon" Width="60" Height="60" State="Indeterminate" />
+	<DockPanel Height="768">
+		<StackPanel Width="320" HorizontalAlignment="Left" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+			<TextBlock TextWrapping="Wrap" Text="Welcome!" Margin="30,70,30,10" FontSize="26.667"/>
+			<TextBlock Margin="30,0,30,0" TextWrapping="Wrap" FontSize="14.667" Foreground="#CC000000" TextAlignment="Justify" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae velit arcu. Sed eget dolor id lacus ornare placerat. Maecenas pulvinar nibh urna, id congue augue."/>
+			<TextBlock Margin="30,30,30,0" TextWrapping="Wrap" FontSize="14.667" TextAlignment="Justify" Foreground="#CC000000" Text="•  View all available events&#xa;•  View all upcoming events&#xa;•  Register all events"/>
+			<TextBlock TextWrapping="Wrap" Text="Login" Margin="30,50,30,10" FontSize="26.667"/>
+			<Label Content="Username" FontSize="13.333" Margin="30,0" Padding="0,0,0,5" Foreground="#7F000000"/>
+			<TextBox x:Name="usernameText" Margin="30,0,30,0" TextWrapping="Wrap" Height="35" />
+			<Label Content="Password" FontSize="13.333" Margin="30,10,30,0" Padding="0,0,0,5" Foreground="#7F000000"/>
+			<PasswordBox Margin="30,0" Height="35"/>
+			<DockPanel Height="31.7333333333333" Margin="30,20,30,0">
+				<Button x:Name="loginButton" Content="LOGIN"  HorizontalAlignment="Right" FontSize="13.333" Width="100" Padding="5,7" Click="LoginButton_Click" d:LayoutOverrides="Height" DockPanel.Dock="Right" />
+				<metro:CircularProgressBar x:Name="loginLoadingIcon" Width="20" State="Indeterminate" DockPanel.Dock="Right" Margin="100,0,0,0" Visibility="Hidden" />	
+			</DockPanel>
 		</StackPanel>
-	</StackPanel>
+		<StackPanel Width="704" HorizontalAlignment="Left" DockPanel.Dock="Right">
+			<DockPanel Margin="30,60,30,0">
+				<TextBlock TextWrapping="Wrap" Text="Upcoming Events" FontSize="32" Width="260"/>
+				<ComboBox x:Name="upcomingEventsFilter" HorizontalAlignment="Right" FontSize="14.667" ToolTip="View by Month" Width="175" SelectionChanged="UpcomingEventsFilter_SelectionChanged" Margin="0,10">
+					<ComboBoxItem Content="View by Month" IsEnabled="False" IsSelected="True" d:IsHidden="True" />
+					<ComboBoxItem Content="March 2012" d:IsHidden="True" />
+					<ComboBoxItem Content="February 2012" d:IsHidden="True" />
+					<ComboBoxItem Content="January 2012" d:IsHidden="True" />
+				</ComboBox>
+			</DockPanel>
+			<ScrollViewer x:Name="upcomingEventsScrollViewer" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="30,30,30,0" Height="470" BorderBrush="#FFCCCCCC" >
+				<ItemsControl x:Name="upcomingEventsListBox" ItemTemplate="{DynamicResource UpcomingEventsItemsTemplate}" />
+			</ScrollViewer>
+			<metro:CircularProgressBar x:Name="upcomingEventsLoadingIcon" Width="30" Height="30" Margin="297,-500,333,0" State="Indeterminate" Visibility="Hidden" />
+			<Separator Margin="30,0" Background="#99000000"/>
+			<DockPanel LastChildFill="False" Margin="100,20,100,10">
+				<Button x:Name="prevButton" Content="PREVIOUS" Width="150" Padding="8,9" FontSize="13.333" Click="PrevButton_Click" />
+				<Button x:Name="nextButton" Content="NEXT" Width="150" Padding="8,9" DockPanel.Dock="Right" FontSize="13.333" Click="NextButton_Click" />
+			</DockPanel>
+		</StackPanel>
+	</DockPanel>
 </Page>

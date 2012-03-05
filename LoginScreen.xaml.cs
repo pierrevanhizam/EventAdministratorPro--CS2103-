@@ -87,7 +87,6 @@ namespace EMP
 		private void LoginButton_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
 			// TODO: Validate user login information.
-			this.loginLoadingPanel.Visibility = Visibility.Visible;
 		}
 	}
 }
