@@ -39,7 +39,7 @@
 				<metro:CircularProgressBar x:Name="loginLoadingIcon" Width="20" State="Indeterminate" DockPanel.Dock="Right" Margin="100,0,0,0" Visibility="Hidden" />	
 			</DockPanel>
 		</StackPanel>
-		<StackPanel Width="704" HorizontalAlignment="Left" DockPanel.Dock="Right">
+		<StackPanel Width="704" HorizontalAlignment="Left" DockPanel.Dock="Right" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
 			<DockPanel Margin="30,60,30,0">
 				<TextBlock TextWrapping="Wrap" Text="Upcoming Events" FontSize="32" Width="260"/>
 				<ComboBox x:Name="upcomingEventsFilter" HorizontalAlignment="Right" FontSize="14.667" ToolTip="View by Month" Width="175" SelectionChanged="UpcomingEventsFilter_SelectionChanged" Margin="0,10">

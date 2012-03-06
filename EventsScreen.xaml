@@ -36,6 +36,7 @@
 							<!--<DataGridTemplateColumn Header="ACTION(S)" CellTemplate="{DynamicResource ActionCellTemplate}" />-->
 						</DataGrid.Columns>
 					</DataGrid>
+					<metro:CircularProgressBar x:Name="upcomingEventsLoadingIcon" Width="32" State="Indeterminate" HorizontalAlignment="Center" Height="32" Visibility="Hidden" />
 				</StackPanel>
 			</TabItem>
 			<TabItem Header="My Events">
@@ -50,6 +51,7 @@
 							<!--<DataGridTemplateColumn Header="ACTION(S)" CellTemplate="{DynamicResource ActionCellTemplate}" />-->
 						</DataGrid.Columns>
 					</DataGrid>
+					<metro:CircularProgressBar x:Name="createdEventsLoadingIcon_Copy" Width="32" State="Indeterminate" HorizontalAlignment="Center" Height="32" Visibility="Hidden" />
 					<Separator Height="30" Margin="0"/>
 					<Label Content="REGISTERED EVENTS" HorizontalAlignment="Left" Margin="0" FontSize="16" FontWeight="Bold"/>
 					<Label Content="Oops! You don't seem to have any events registered under your account." HorizontalAlignment="Left" Margin="0" FontSize="14.667"/>
