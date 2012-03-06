@@ -57,6 +57,11 @@
 					<Button Content="REGISTER" HorizontalAlignment="Left" Width="Auto" d:LayoutOverrides="Height" FontWeight="Normal" FontSize="12" Padding="8,5"/>
 				</Grid>
 			</DataTemplate>
+			<Style x:Key="formLabel" TargetType="{x:Type Label}">
+				<Setter Property="FontSize" Value="14.667"/>
+				<Setter Property="Width" Value="Auto"/>
+				<Setter Property="Height" Value="Auto"/>
+			</Style>
 		</ResourceDictionary>
 		<!-- Resources scoped at the Application level should be defined here. -->
 	</Application.Resources>

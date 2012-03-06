@@ -9,23 +9,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 using System.Collections.ObjectModel;
-using EventClass;
 using StudentClass;
+using EventClass;
 
 namespace EMP
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EditEventsScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditEventScreen : Page
     {
-		public MainWindow()
-		{
-			this.InitializeComponent();
-			this._mainFrame.Navigate(new Uri("EditEventScreen.xaml", UriKind.Relative));
-		}
+        public EditEventScreen()
+        {
+            InitializeComponent();
+			
+			// Set the title according to current action (Edit or Add).
+			this.Title = "Create Event";
+        }
     }
 }
