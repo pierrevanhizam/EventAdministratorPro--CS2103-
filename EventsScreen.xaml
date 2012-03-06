@@ -14,13 +14,10 @@
 			<Label x:Name="loggedInUserLabel" FontWeight="Bold" Content="Melvin" Padding="0,5" FontSize="13.333"/>
 			<Button Content="LOGOUT" Padding="8,0" Margin="10,0,0,0" FontSize="12" Background="#FF333333"/>
 		</StackPanel>
-		<Grid Margin="30,20,30,0" d:LayoutOverrides="Width">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="0*"/>
-			</Grid.RowDefinitions>
-			<TextBlock TextWrapping="Wrap" Text="Events Management" FontSize="32" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalAlignment, Height, GridBox" Grid.Row="1"/>
-			<Button Content="Create New Event" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="16" FontWeight="Normal" Padding="10" Grid.Row="1"/>
-		</Grid>
+		<StackPanel Margin="30,20,30,0" d:LayoutOverrides="Width" Orientation="Horizontal">
+			<TextBlock TextWrapping="Wrap" Text="Events Management" FontSize="32" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalAlignment, GridBox"/>
+			<Button Content="Create Event" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" FontWeight="Normal" Margin="20,0,0,0" Padding="10,7,10,9"/>
+		</StackPanel>
 		<TabControl DockPanel.Dock="Right" Margin="30,15,30,0">
 			<TabItem Header="Upcoming" IsSelected="True">
 				<StackPanel Height="560">
